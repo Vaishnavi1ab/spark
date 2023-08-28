@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head >
+        <title>FILTER</title>
+        <script
+src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script
+src="https://unpkg.com/aframe-spe-particles-component@^1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+
+    </head>
+
+    <body>
+        <a-scene>
+            <a-entity positions="0 1 0"
+            spe-particles="
+              color: yellow,red, cyan, black; 
+             distribution: disc;
+              randomize-velocity: true;
+               radius: 7;
+                particle-count: 800; 
+                velocity: 1;
+                 velocity-spread: 30;
+                  drag: 1; duration: -1;
+                   blending: additive;
+                    active-multiplier: 1000; 
+                    size: 1, 1, 1, 0"
+
+            
+            ></a-entity>
+             <a-entity positions="2 5 0"
+            spe-particles="
+              color: yellow,red, cyan, black; 
+              preset:cloud;
+             distribution: sphere;
+             angle:40;
+        height:3
+              randomize-velocity: true;
+               radius: 8;
+                particle-count: 800; 
+                velocity: 1;
+                 velocity-spread: 10;
+                  drag: 0.2;
+                   duration: -1;
+                   blending: additive;
+                    active-multiplier: 1000; 
+                    size: 0.5,0.5,0.5 0"
+
+                    
+
+            
+            ></a-entity>
+
+            
+            <a-entity position="0 1 0"
+             spe-particles=" color: green, yellow, orange;
+              distribution: cone; 
+              angle: 60;
+               height: 2;
+                particle-count: 500; 
+                velocity: 1;
+                 velocity-spread: 10;
+                  drag: 0.2; 
+                  max-age: 5; 
+                  duration: -1;
+                   blending: normal;
+                    active-multiplier: 1000;
+                     size: 0.5, 0.5, 0.5, 0"> </a-entity>
+            <a-sky color="black"></a-sky>
+            <a-camera position="0 0 30"></a-camera>
+        </a-scene>
+    </body>
+</html>
